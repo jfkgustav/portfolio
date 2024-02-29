@@ -25,7 +25,7 @@
     </h3>
 
     <p class="scroll-m-20 text-md tracking-tight text-left lg:text-lg font-semibold py-5 text-gray-800">
-      Jag har suttit vid datorn majoriteten av mitt liv och nu har jag även tänkt att det ska fortsätta så. <br>
+      Jag har suttit vid datorn majoriteten av mitt liv och nu har jag även tänkt att det ska fortsätta så.
       Vid datorn gillar jag att skapa musik, programmera och så klart spela dataspel.  
     </p>
 

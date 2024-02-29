@@ -45,20 +45,22 @@
       </Button>
     </Sheet.Trigger>
     <Sheet.Content side="right" class="h-1/2 w-full">
+      <Sheet.Close asChild let:builder>
       <div class="text-center pt-10">
         <div>
-          <Button variant="link" class="font-bold" href="/">Hem</Button>
+          <Button builders={[builder]} variant="link" class="font-bold" href="/">Hem</Button>
         </div>
         <div>
-          <Button variant="link" class="font-bold" href="/projects">Projekt</Button>
+          <Button builders={[builder]} variant="link" class="font-bold" href="/projects">Projekt</Button>
         </div>
         <div>
-          <Button variant="link" class="font-bold" href="/contact">Kontakt</Button>
+          <Button builders={[builder]} variant="link" class="font-bold" href="/contact">Kontakt</Button>
         </div>
         <div>
-          <Button variant="link" class="font-bold" href="/about">Om</Button>
+          <Button builders={[builder]} variant="link" class="font-bold" href="/about">Om</Button>
         </div>
       </div>
+      </Sheet.Close>
       <Sheet.Footer class="items-center">
         <Sheet.Close asChild let:builder>
           <Button builders={[builder]} type="submit" class="w-1/4 font-bold" variant="ghost">X</Button>
