@@ -19,32 +19,32 @@
     Simpel grafikmotor skriven i C++ med hjälp av OpenGL, GLM och tinyOBJloader
   </h3>
 
-
-  <Carousel.Root
-    opts={{
-      align: "start",
-      loop: true,
-    }}
-  >
-    
-    <Carousel.Content class="mx-auto">
-      <Carousel.Item>
-        <img src={three_d_studio_one} alt="3D studio bild 1" class="mx-auto w-1/2"/>
-        <p class="text-md text-center font-semibold leading-none py-3"> 3D studio </p>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img src={three_d_parallel} alt="Parallel Projektion" class="mx-auto w-1/2"/>
-        <p class="text-md text-center font-semibold leading-none py-3"> Parallel Projection </p>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img src={three_d_oblique} alt="Oblik Projektion" class="mx-auto w-1/2"/>
-        <p class="text-md text-center font-semibold leading-none py-3"> Oblique Projection </p>
-      </Carousel.Item>
-    </Carousel.Content>
-    <Carousel.Previous class=""/>
-    <Carousel.Next />
-  </Carousel.Root>
-
+  <div class="container ">
+    <Carousel.Root
+      opts={{
+        align: "start",
+        loop: true,
+      }}
+    >
+      
+      <Carousel.Content class="mx-auto">
+        <Carousel.Item>
+          <img src={three_d_studio_one} alt="3D studio bild 1" class="mx-auto w-1/2"/>
+          <p class="text-md text-center text-xl font-semibold leading-none py-3"> 3D Studio </p>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img src={three_d_parallel} alt="Parallel Projektion" class="mx-auto w-1/2"/>
+          <p class="text-md text-center font-semibold leading-none py-3"> Parallel Projection </p>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img src={three_d_oblique} alt="Oblik Projektion" class="mx-auto w-1/2"/>
+          <p class="text-md text-center font-semibold leading-none py-3"> Oblique Projection </p>
+        </Carousel.Item>
+      </Carousel.Content>
+      <Carousel.Previous/>
+      <Carousel.Next/>
+    </Carousel.Root>
+  </div>
 </div>
 
 

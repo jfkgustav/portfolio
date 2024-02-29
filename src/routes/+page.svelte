@@ -4,15 +4,15 @@
   import cv from '$lib/assets/cv.png';
   import * as Avatar from "$lib/components/ui/avatar";
   import cv_file from '$lib/assets/CV.pdf';
-  import * as Card from "$lib/components/ui/card";
+  import gitHub from "$lib/assets/Github.png";
 </script>
 
 
 
-<div class="card container grid grid-cols-2 gap-40 justify-center lg:py-32">
+<div class="container md:grid md:grid-cols-2 gap-40 justify-center xl:py-32">
 
   <div class="my-auto rounded-lg p-5">
-    <h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+    <h1 class="scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-5xl">
       Gustav Johansson
     </h1>
     <h3 class="scroll-m-20 text-l tracking-tight lg:text-2xl text-gray-500">
@@ -25,26 +25,26 @@
       kika på lite grejor jag har hållit på med!
     </p>
 
-    <div class="container grid grid-cols-2 ">
-    <div class="container flex items-center gap-x-3 -ml-10 p-0"> 
+    <div class="grid grid-cols-3">
+    <div class="container flex items-center gap-x-3 p-0 "> 
       <Avatar.Root>
-        <Avatar.Image src={linkedin} alt="linkedin logo" />
+        <Avatar.Image src={gitHub} alt="github logo" />
         <Avatar.Fallback>In</Avatar.Fallback>
       </Avatar.Root>
 
-      <a href="https://www.linkedin.com" class="scroll-m-20 text-l text-[#0284c7] tracking-tight lg:text-2xl">
-        Gustav Johansson
+      <a href="https://github.com/jfkgustav" class="scroll-m-20 text-l text-[#0284c7] tracking-tight lg:text-2xl">
+        jfkgustav
       </a>
     </div>
 
-    <div class="container flex items-center gap-x-3 p-0"> 
+    <div class="container flex items-center gap-x-3 p-0 "> 
         <Avatar.Root>
           <Avatar.Image src={cv} alt="Mitt CV" />
           <Avatar.Fallback>CV</Avatar.Fallback>
         </Avatar.Root>
   
         <a href={cv_file} download class="scroll-m-20 text-l text-purple-600 tracking-tight lg:text-2xl">
-          Ladda ned CV
+          Hämta CV
         </a>
     </div>
   </div>
