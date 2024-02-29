@@ -17,16 +17,16 @@
   {#if $isDesktop}
   <div class="flex flex-wrap items-center justify-between mx-auto py-4 px-32">
     <div>
-      <Button variant="link" class="font-bold" href="/">Hem</Button>
+      <Button variant="link" class="font-bold text-lg" href="/">Hem</Button>
     </div>
     <div>
-      <Button variant="link" class="font-bold" href="/projects">Projekt</Button>
+      <Button variant="link" class="font-bold text-lg" href="/projects">Projekt</Button>
     </div>
     <div>
-      <Button variant="link" class="font-bold" href="/contact">Kontakt</Button>
+      <Button variant="link" class="font-bold text-lg" href="/contact">Kontakt</Button>
     </div>
     <div>
-      <Button variant="link" class="font-bold" href="/about">Om</Button>
+      <Button variant="link" class="font-bold text-lg" href="/about">Om</Button>
     </div>
   </div>
 
@@ -40,7 +40,7 @@
   <div class="text-right">
   <Sheet.Root>
     <Sheet.Trigger asChild let:builder>
-      <Button builders={[builder]} variant="ghost" class="w-1/4 m-2 mr-0">
+      <Button builders={[builder]} variant="link" class="w-1/4 m-2 mr-0">
         <img src={hamburger} alt="meny">
       </Button>
     </Sheet.Trigger>
