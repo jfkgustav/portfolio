@@ -5,18 +5,22 @@
   import * as Avatar from "$lib/components/ui/avatar";
   import cv_file from '$lib/assets/CV.pdf';
   import gitHub from "$lib/assets/Github.png";
+  import epic from "$lib/assets/epic.png"
+
+  import { mediaQuery } from "svelte-legos";
+  const isDesktop = mediaQuery("(min-width: 768px)");
 </script>
 
 
 
-<div class="container flex md:grid md:grid-cols-2 gap-40 text-center sm:text-left justify-center xl:py-32">
+<div class=" flex md:grid md:grid-cols-2 gap-40 text-center sm:text-left justify-center xl:py-20 h-full" style="background-image: url({epic}); background-repeat: no-repeat; background-size: cover;">
 
 
-  <div class="flex mx-auto drop-shadow-2xl z-0 relative justify-center">
+  <div class="sm:order-2 sm:hidden flex mx-auto drop-shadow-2xl z-0 relative justify-center">
     <img src={avatar} alt="Find bild på mig :)" class="md:border md:border-orange-500 aspect-square rounded-lg w-full md:w-[500px] md:rounded-full object-cover object-right-top " />
   </div>
 
-  <div class="containermy-auto rounded-lg p-5 z-20 absolute md:static mt-72 md:mt-0 w-full bg-orange-200">
+  <div class="container sm:w-full sm:px-10 sm:ml-32 my-auto rounded-lg p-5 z-20 absolute md:static mt-72 md:mt-0 w-full bg-slate-100 sm:bg-white">
     <h1 class="scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-5xl">
       Gustav Johansson
     </h1>
@@ -39,7 +43,23 @@
       Klicka på hamburgaren!
     </p>
 
+ 
+
     <div class="grid grid-cols-2 sm:grid-cols-3 mt-5">
+
+      <div class="container flex flex-col sm:flex-row items-center gap-x-3 p-0 "> 
+        <a href={cv_file} download>
+        <Avatar.Root>
+          <Avatar.Image src={cv} alt="Mitt CV"/>
+          <Avatar.Fallback>CV</Avatar.Fallback>
+        </Avatar.Root>
+        </a>
+  
+        <a href={cv_file} download class="scroll-m-20 text-l text-purple-600 tracking-tight lg:text-2xl">
+          Hämta CV
+        </a>
+     </div>
+
       <div class="container flex flex-col sm:flex-row items-center gap-x-3 p-0 "> 
         <Avatar.Root >
           <a href="https://github.com/jfkgustav"><Avatar.Image src={gitHub} alt="github logo" /> </a>
@@ -51,18 +71,7 @@
         </a>
       </div>
 
-      <div class="container flex flex-col sm:flex-row items-center gap-x-3 p-0 "> 
-          <a href={cv_file} download>
-          <Avatar.Root>
-            <Avatar.Image src={cv} alt="Mitt CV"/>
-            <Avatar.Fallback>CV</Avatar.Fallback>
-          </Avatar.Root>
-          </a>
-    
-          <a href={cv_file} download class="scroll-m-20 text-l text-purple-600 tracking-tight lg:text-2xl">
-            Hämta CV
-          </a>
-      </div>
+
 
       <div class="hidden container flex flex-col sm:flex-row items-center gap-x-3 p-0 "> 
         <Avatar.Root>

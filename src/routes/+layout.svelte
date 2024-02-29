@@ -6,12 +6,13 @@
   import hamburger from "$lib/assets/hamburgare.png";
   import { mediaQuery } from "svelte-legos";
  
+ 
   let open = false;
   const isDesktop = mediaQuery("(min-width: 768px)");
 
 </script>
 
-<div class="h-[calc(100vh)]">
+<div class="bg-local h-[calc(100vh)]">
 
   
   {#if $isDesktop}
