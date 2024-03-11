@@ -6,6 +6,7 @@
   import cv_file from '$lib/assets/CV.pdf';
   import gitHub from "$lib/assets/Github.png";
   import epic from "$lib/assets/epic.png"
+  import epic_square from "$lib/assets/epic_square.png"
 
   import { mediaQuery } from "svelte-legos";
   const isDesktop = mediaQuery("(min-width: 768px)");
@@ -17,7 +18,7 @@
 
 
   <div class="sm:order-2 sm:hidden flex mx-auto drop-shadow-2xl z-0 relative justify-center">
-    <img src={avatar} alt="Find bild på mig :)" class="md:border md:border-orange-500 aspect-square rounded-lg w-full md:w-[500px] md:rounded-full object-cover object-right-top " />
+    <img src={epic_square} alt="Find bild på mig :)" class="rounded-lg object-cover " />
   </div>
 
   <div class="container sm:w-full sm:px-10 sm:ml-32 my-auto rounded-lg p-5 z-20 absolute md:static mt-72 md:mt-0 w-full bg-slate-100 sm:bg-white">

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>~/portfolio/src/routes/projects/+page.svelte.html</title>
+<meta name="Generator" content="Vim/8.0">
+<meta name="plugin-version" content="vim8.1_v2">
+<meta name="syntax" content="none">
+<meta name="settings" content="use_css,no_foldcolumn,expand_tabs,prevent_copy=,use_input_for_pc=fallback">
+<meta name="colorscheme" content="none">
+<style>
+<!--
+pre { font-family: monospace; color: #ffffff; background-color: #000000; }
+body { font-family: monospace; color: #ffffff; background-color: #000000; }
+* { font-size: 1em; }
+-->
+</style>
+</head>
+<body>
+<pre id='vimCodeElement'>
+&lt;script lang=&quot;ts&quot;&gt;
+    import * as Carousel from '$lib/components/ui/carousel/index.js';
+    import jointfly_start from '$lib/assets/jointfly_start.png';
+    import jointfly_play from '$lib/assets/jointfly_play.png';
+    import recharge from '$lib/assets/recharge.png';
+    import three_d_studio_one from '$lib/assets/3d_studio_one.png';
+    import three_d_parallel from '$lib/assets/3d_parallel.png';
+    import three_d_oblique from '$lib/assets/3d_oblique.png';
+    import skrivert_meme from '$lib/assets/skrivert_meme.jpg';
+    import AspectRatio from '$lib/components/ui/aspect-ratio/aspect-ratio.svelte';
+&lt;/script&gt;
+
+&lt;div class=&quot;snap-y snap-mandatory snap-always from-emerald-900 to-green-400 sm:-mt-10&quot;&gt;
+    &lt;!--
+  &lt;h1 class=&quot;scroll-m-20 text-3xl sm:text-orange-800 sm:text-4xl font-extrabold text-center sm:pb-5 tracking-tight &quot;&gt;
+    Mina projekt
+  &lt;/h1&gt;
+
+  &lt;h3 class=&quot;sm:hidden scroll-m-20 text-sm text-center tracking-tight pb-5 text-gray-500&quot;&gt;
+    Swipea för att se fler bilder
+  &lt;/h3&gt;
+      !--&gt;
+
+    &lt;div class=&quot;h-screen snap-start items-center sm:grid sm:grid-cols-2&quot; id=&quot;jointfly&quot;&gt;
+        &lt;div class=&quot;container snap-center pb-10 sm:order-2&quot; id=&quot;jointfly right&quot;&gt;
+            &lt;Carousel.Root
+                opts={{
+                    align: 'start',
+                    loop: true
+                }}
+            &gt;
+                &lt;Carousel.Content class=&quot;mx-auto&quot;&gt;
+                    &lt;Carousel.Item&gt;
+                        &lt;p class=&quot;py-3 text-center text-xl font-semibold leading-none&quot;&gt;1 / 2&lt;/p&gt;
+                        &lt;img src={jointfly_start} alt=&quot;jointfly startskärm&quot; class=&quot;mx-auto w-full sm:w-5/6&quot; /&gt;
+                        &lt;p class=&quot;py-3 text-center text-xl font-semibold leading-none&quot;&gt;jointflys startskärm&lt;/p&gt;
+                    &lt;/Carousel.Item&gt;
+                    &lt;Carousel.Item&gt;
+                        &lt;p class=&quot;py-3 text-center text-xl font-semibold leading-none&quot;&gt;2 / 2&lt;/p&gt;
+                        &lt;img src={jointfly_play} alt=&quot;jointfly körs&quot; class=&quot;mx-auto w-full sm:w-5/6&quot; /&gt;
+                        &lt;p class=&quot;py-3 text-center text-xl font-semibold leading-none&quot;&gt;
+                            Bild på när jointfly körs
+                        &lt;/p&gt;
+                    &lt;/Carousel.Item&gt;
+                &lt;/Carousel.Content&gt;
+                &lt;Carousel.Previous class=&quot;hidden &quot; /&gt;
+                &lt;Carousel.Next class=&quot;hidden &quot; /&gt;
+            &lt;/Carousel.Root&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;px-3 sm:container sm:w-3/5 sm:px-0&quot; id=&quot;jointfly left&quot;&gt;
+            &lt;h1 class=&quot;text-center text-4xl font-extrabold tracking-tight sm:text-left lg:text-5xl&quot;&gt;
+                jointfly!
+            &lt;/h1&gt;
+
+            &lt;h3 class=&quot;text-md py-3 text-center font-semibold sm:text-left sm:text-3xl&quot;&gt;
+                En prototyp av en app gjord för att styra flera drönare samtidigt från en mobil enhet.
+            &lt;/h3&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;h-screen snap-start items-center sm:grid sm:grid-cols-2 sm:px-5&quot; id=&quot;grafikmotor&quot;&gt;
+        &lt;div class=&quot;sm:container sm:order-2&quot; id=&quot;grafikmotor right&quot;&gt;
+            &lt;div class=&quot;sm:container&quot;&gt;
+                &lt;Carousel.Root
+                    opts={{
+                        align: 'start',
+                        loop: true
+                    }}
+                &gt;
+                    &lt;Carousel.Content class=&quot;mx-auto&quot;&gt;
+                        &lt;Carousel.Item&gt;
+                            &lt;p class=&quot;py-3 text-center text-xl font-semibold leading-none&quot;&gt;1 / 3&lt;/p&gt;
+                            &lt;img
+                                src={three_d_studio_one}
+                                alt=&quot;3D studio bild 1&quot;
+                                class=&quot;mx-auto w-full border border border-2 sm:w-5/6&quot;
+                            /&gt;
+                            &lt;p class=&quot;py-3 text-center text-xl font-semibold leading-none&quot;&gt;3D Studio&lt;/p&gt;
+                        &lt;/Carousel.Item&gt;
+                        &lt;Carousel.Item&gt;
+                            &lt;p class=&quot;py-3 text-center text-xl font-semibold leading-none&quot;&gt;2 / 3&lt;/p&gt;
+                            &lt;img
+                                src={three_d_parallel}
+                                alt=&quot;Parallel Projektion&quot;
+                                class=&quot;mx-auto w-full border sm:w-5/6&quot;
+                            /&gt;
+                            &lt;p class=&quot;py-3 text-center text-xl font-semibold leading-none&quot;&gt;Parallel Projection&lt;/p&gt;
+                        &lt;/Carousel.Item&gt;
+                        &lt;Carousel.Item&gt;
+                            &lt;p class=&quot;py-3 text-center text-xl font-semibold leading-none&quot;&gt;3 / 3&lt;/p&gt;
+                            &lt;img
+                                src={three_d_oblique}
+                                alt=&quot;Oblik Projektion&quot;
+                                class=&quot;mx-auto w-full border sm:w-5/6&quot;
+                            /&gt;
+                            &lt;p class=&quot;py-3 text-center text-xl font-semibold leading-none&quot;&gt;Oblique Projection&lt;/p&gt;
+                        &lt;/Carousel.Item&gt;
+                    &lt;/Carousel.Content&gt;
+                    &lt;Carousel.Previous class=&quot;hidden&quot; /&gt;
+                    &lt;Carousel.Next class=&quot;hidden&quot; /&gt;
+                &lt;/Carousel.Root&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;px-3 sm:container sm:w-3/5 sm:px-0&quot; id=&quot;grafikmotor left&quot;&gt;
+            &lt;h1 class=&quot;text-center text-4xl font-extrabold tracking-tight sm:text-left lg:text-5xl&quot;&gt;
+                3D Studio
+            &lt;/h1&gt;
+
+            &lt;h3 class=&quot;text-md py-3 text-center font-semibold sm:text-left sm:text-3xl&quot;&gt;
+                Simpel grafikmotor skriven i C++ med hjälp av OpenGL, GLM och tinyOBJloader
+            &lt;/h3&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;h-screen snap-start items-center sm:grid sm:grid-cols-2&quot; id=&quot;recharge&quot;&gt;
+        &lt;div class=&quot;container order-2 pb-10&quot; id=&quot;recharge right&quot;&gt;
+            &lt;img src={recharge} alt=&quot;recharge&quot; class=&quot;mx-auto w-full sm:w-5/6&quot; /&gt;
+            &lt;p class=&quot;py-3 text-center text-xl font-semibold leading-none&quot;&gt;RECHARGE&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;px-3 sm:container sm:w-3/5 sm:px-0&quot; id=&quot;recharge left&quot;&gt;
+            &lt;h1 class=&quot;text-center text-4xl font-extrabold tracking-tight sm:text-left lg:text-5xl&quot;&gt;
+                RECHARGE
+            &lt;/h1&gt;
+
+            &lt;h3 class=&quot;text-md py-3 text-center font-semibold sm:text-left sm:text-3xl&quot;&gt;
+                En prototyp av en app gjord för &lt;br /&gt; att smidigt hitta och boka laddstationer för elbilar
+            &lt;/h3&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;h-screen snap-start items-center sm:grid sm:grid-cols-2&quot; id=&quot;skrivert&quot;&gt;
+        &lt;div class=&quot;container snap-center pb-10 sm:order-2&quot; id=&quot;skrivert right&quot;&gt;
+            &lt;img src={skrivert_meme} alt=&quot;skrivert meme if i had any&quot; class=&quot;mx-auto w-full sm:w-1/2&quot; /&gt;
+            &lt;p class=&quot;py-3 text-center text-xl font-semibold leading-none&quot;&gt;
+                Än så länge har vi inte kommit så långt i detta projekt :)
+            &lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;px-3 sm:container sm:w-3/5 sm:px-0&quot; id=&quot;skrivert left&quot;&gt;
+            &lt;h1 class=&quot;text-center text-4xl font-extrabold tracking-tight sm:text-left lg:text-5xl&quot;&gt;
+                skrivert
+            &lt;/h1&gt;
+
+            &lt;h3 class=&quot;text-md py-3 text-center font-semibold sm:text-left sm:text-3xl&quot;&gt;
+                Projekt för att skapa GUI till en textproduktionsapplikation
+            &lt;/h3&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->
