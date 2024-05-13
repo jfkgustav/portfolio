@@ -10,7 +10,7 @@
 	import AspectRatio from '$lib/components/ui/aspect-ratio/aspect-ratio.svelte';
 </script>
 
-<div class="max-h-screen overflow-y-scroll snap-y snap-mandatory sm:-mt-10">
+<div class="overflow-y-scroll snap-y snap-mandatory sm:-mt-10">
 	<!--
   <h1 class="scroll-m-20 text-3xl sm:text-orange-800 sm:text-4xl font-extrabold text-center sm:pb-5 tracking-tight ">
     Mina projekt
