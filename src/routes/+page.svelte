@@ -31,9 +31,12 @@
 	};
 
 	function handler() {
-		// does update the object
-		kontakt.body = 'jfkgustav@gmail.com';
-		show_mail = true;
+		show_mail = !show_mail;
+		if (show_mail) {
+			kontakt.body = 'jfkgustav@gmail.com';
+		} else {
+			kontakt.body = 'Kontakta mig!';
+		}
 	}
 </script>
 
@@ -101,7 +104,12 @@
 
 				<div class=" flex flex-col items-center justify-center gap-x-3 p-0 sm:flex-row">
 					<Avatar.Root>
-						<Avatar.Image src={mail} alt="kontakta mig" />
+						<button
+							on:click={handler}
+							class="text-l tracking-tight text-[rgb(186,199,2)] lg:text-2xl"
+						>
+							<Avatar.Image src={mail} alt="kontakta mig" />
+						</button>
 						<Avatar.Fallback>Mail</Avatar.Fallback>
 					</Avatar.Root>
 
@@ -198,7 +206,7 @@
 					</div>
 
 					<p class="py-3 text-center text-sm font-semibold text-blue-500 sm:text-left sm:text-xl">
-						<a href="/jointfly"> Läs mer </a>
+						<a href="/skrivert"> Läs mer </a>
 					</p>
 				</div>
 			</div>
@@ -325,7 +333,7 @@
 				</div>
 
 				<p class="py-3 text-center text-sm font-semibold text-blue-500 sm:text-left sm:text-xl">
-					<a href="/jointfly"> Läs mer </a>
+					<a href="/3dstudio"> Läs mer </a>
 				</p>
 			</div>
 		</div>
@@ -358,7 +366,7 @@
 				</div>
 
 				<p class="pt-3 text-center text-sm font-semibold text-blue-500 sm:text-left sm:text-xl">
-					<a href="/jointfly"> Läs mer </a>
+					<a href="/recharge"> Läs mer </a>
 				</p>
 			</div>
 		</div>
