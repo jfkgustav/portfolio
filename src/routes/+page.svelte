@@ -8,17 +8,17 @@
 	import epic from '$lib/assets/epic.png';
 	import epic_square from '$lib/assets/epic_square.png';
 	import * as Carousel from '$lib/components/ui/carousel/index.js';
-	let jointfly_start = 'src/lib/assets/jointfly_start.png';
-	let jointfly_play = 'src/lib/assets/jointfly_play.png';
-	let recharge = 'src/lib/assets/recharge.png';
-	let three_d_studio_one = 'src/lib/assets/three_d_studio_one.png';
-	let three_d_parallel = 'src/lib/assets/three_d_parallel.png';
-	let three_d_oblique = 'src/lib/assets/three_d_oblique.png';
-	let skrivert_meme = 'src/lib/assets/skrivert_meme.jpg';
-	let mail = 'src/lib/assets/mail.png';
-	let skrivert_gif = 'src/lib/assets/skrivert_infinity.gif';
-	let skrivert_settings = 'src/lib/assets/skrivert/settings.png';
-	let skrivert_skriva = 'src/lib/assets/skrivert/skriva.png';
+	import jointfly_start from '$lib/assets/jointfly_start.png';
+	import recharge from '$lib/assets/recharge.png';
+	import three_d_studio_one from '$lib/assets/three_d_studio_one.png';
+	import jointfly_play from '$lib/assets/jointfly_play.png';
+	import three_d_parallel from '$lib/assets/three_d_parallel.png';
+	import three_d_oblique from '$lib/assets/three_d_oblique.png';
+	import skrivert_meme from '$lib/assets/skrivert_meme.jpg';
+	import mail from '$lib/assets/mail.png';
+	import skrivert_gif from '$lib/assets/skrivert_infinity.gif';
+	import skrivert_settings from '$lib/assets/skrivert/settings.png';
+	import skrivert_skriva from '$lib/assets/skrivert/skriva.png';
 
 	import Autoplay from 'embla-carousel-autoplay';
 	import { fullScreenAction, mediaQuery } from 'svelte-legos';
