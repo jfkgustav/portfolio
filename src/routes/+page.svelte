@@ -157,7 +157,7 @@
 		<div class=" h-screen snap-center sm:pt-10" id="skrivert">
 			<h1 class="pb-16 text-center text-lg font-bold tracking-tight">Mina projekt</h1>
 			<div class="container items-center justify-center sm:grid sm:grid-cols-2">
-				<div class=" pb-10 sm:order-2" id="skrivert right">
+				<div class="sm:order-2" id="skrivert right">
 					<Carousel.Root
 						opts={{
 							align: 'start',
@@ -239,8 +239,11 @@
 			</div>
 		</div>
 
-		<div class="container grid h-screen snap-center items-center sm:grid-cols-2" id="jointfly">
-			<div class="pb-10 sm:order-2" id="jointfly right">
+		<div
+			class="container grid h-screen snap-center items-center py-16 sm:grid-cols-2 sm:py-0"
+			id="jointfly"
+		>
+			<div class="sm:order-2" id="jointfly right">
 				<Carousel.Root
 					opts={{
 						align: 'start',
@@ -306,62 +309,59 @@
 			</div>
 		</div>
 
-		<div class="container grid h-screen snap-center items-center sm:grid-cols-2" id="grafikmotor">
-			<div class="sm:container sm:order-2" id="grafikmotor right">
-				<div class="container">
-					<Carousel.Root
-						opts={{
-							align: 'start',
-							loop: true
-						}}
-					>
-						<Carousel.Content class="mx-auto">
-							<Carousel.Item>
-								<p class="text-md py-3 text-center font-semibold leading-none">1 / 3</p>
-								<button on:click={() => enlargeImage('three_d_studio_one')}>
-									<img
-										src={three_d_studio_one}
-										alt="3D studio bild 1"
-										class="mx-auto object-cover sm:w-5/6"
-									/>
-								</button>
+		<div
+			class="container grid h-screen snap-center items-center py-16 sm:grid-cols-2 sm:py-0"
+			id="grafikmotor"
+		>
+			<div class="sm:order-2" id="grafikmotor right">
+				<Carousel.Root
+					opts={{
+						align: 'start',
+						loop: true
+					}}
+				>
+					<Carousel.Content class="mx-auto">
+						<Carousel.Item>
+							<p class="text-md py-3 text-center font-semibold leading-none">1 / 3</p>
+							<button on:click={() => enlargeImage('three_d_studio_one')}>
+								<img
+									src={three_d_studio_one}
+									alt="3D studio bild 1"
+									class="mx-auto object-cover sm:w-5/6"
+								/>
+							</button>
 
-								<p class="text-md py-3 text-center font-semibold leading-none">3D Studio</p>
-							</Carousel.Item>
-							<Carousel.Item>
-								<p class="text-md py-3 text-center font-semibold leading-none">2 / 3</p>
-								<button on:click={() => enlargeImage('three_d_parallel')}>
-									<img
-										src={three_d_parallel}
-										alt="Parallel Projektion"
-										class="mx-auto object-cover sm:w-5/6"
-									/>
-								</button>
+							<p class="text-md py-3 text-center font-semibold leading-none">3D Studio</p>
+						</Carousel.Item>
+						<Carousel.Item>
+							<p class="text-md py-3 text-center font-semibold leading-none">2 / 3</p>
+							<button on:click={() => enlargeImage('three_d_parallel')}>
+								<img
+									src={three_d_parallel}
+									alt="Parallel Projektion"
+									class="mx-auto object-cover sm:w-5/6"
+								/>
+							</button>
 
-								<p class="text-md py-3 text-center font-semibold leading-none">
-									Parallel Projection
-								</p>
-							</Carousel.Item>
-							<Carousel.Item>
-								<p class="text-md py-3 text-center font-semibold leading-none">3 / 3</p>
-								<button on:click={() => enlargeImage('three_d_oblique')}>
-									<img
-										src={three_d_oblique}
-										alt="Oblik Projektion"
-										class="mx-auto object-cover sm:w-5/6"
-									/>
-								</button>
-								<p class="text-md py-3 text-center font-semibold leading-none">
-									Oblique Projection
-								</p>
-							</Carousel.Item>
-						</Carousel.Content>
-						{#if $isDesktop}
-							<Carousel.Previous />
-							<Carousel.Next />
-						{/if}
-					</Carousel.Root>
-				</div>
+							<p class="text-md py-3 text-center font-semibold leading-none">Parallel Projection</p>
+						</Carousel.Item>
+						<Carousel.Item>
+							<p class="text-md py-3 text-center font-semibold leading-none">3 / 3</p>
+							<button on:click={() => enlargeImage('three_d_oblique')}>
+								<img
+									src={three_d_oblique}
+									alt="Oblik Projektion"
+									class="mx-auto object-cover sm:w-5/6"
+								/>
+							</button>
+							<p class="text-md py-3 text-center font-semibold leading-none">Oblique Projection</p>
+						</Carousel.Item>
+					</Carousel.Content>
+					{#if $isDesktop}
+						<Carousel.Previous />
+						<Carousel.Next />
+					{/if}
+				</Carousel.Root>
 			</div>
 
 			<div class="px-3 sm:container sm:w-3/5 sm:px-0" id="grafikmotor left">
@@ -387,13 +387,16 @@
 			</div>
 		</div>
 
-		<div class="container grid h-screen snap-center items-center sm:grid-cols-2" id="recharge">
-			<div class="container sm:order-2" id="recharge right">
+		<div
+			class="container grid h-screen snap-center items-center py-16 sm:grid-cols-2 sm:py-0"
+			id="recharge"
+		>
+			<div class="sm:order-2" id="recharge right">
 				<img src={recharge} alt="recharge" class="mx-auto w-full sm:w-5/6" />
 				<p class="py-3 text-center text-xl font-semibold leading-none">RECHARGE</p>
 			</div>
 
-			<div class="px-3 sm:container sm:w-3/5 sm:px-0" id="recharge left">
+			<div class=" px-3 sm:container sm:w-3/5 sm:px-0" id="recharge left">
 				<h1 class="text-center text-4xl font-extrabold tracking-tight sm:text-left lg:text-5xl">
 					RECHARGE
 				</h1>
@@ -424,7 +427,7 @@
 				<button
 					id="exit_button"
 					on:click={() => enlargeImage('')}
-					class="flex h-full w-screen scale-50 items-center justify-center py-12 transition-all duration-200 focus:translate-x-0 focus:scale-100 sm:translate-x-96"
+					class="flex h-full w-screen -translate-y-32 scale-50 items-center justify-center py-12 transition-all duration-200 focus:translate-x-0 focus:translate-y-0 focus:scale-100 sm:translate-x-96 sm:translate-y-0"
 				>
 					<img src={large_img_src} alt="stor bild" class="z-40 h-full object-contain" />
 				</button>
