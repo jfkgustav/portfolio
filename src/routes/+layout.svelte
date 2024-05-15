@@ -9,6 +9,6 @@
 	const isDesktop = mediaQuery('(min-width: 768px)');
 </script>
 
-<div class="h-full w-screen">
+<div class="h-screen w-screen">
 	<slot />
 </div>

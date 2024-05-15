@@ -47,6 +47,7 @@
 		"embla-carousel-autoplay": "^8.0.4",
 		"embla-carousel-svelte": "^8.0.0",
 		"rollup": "^4.12.0",
+		"svelte-fullscreen": "^2.0.0",
 		"svelte-legos": "^0.2.2",
 		"svelte-radix": "^1.0.1",
 		"tailwind-merge": "^2.2.1",

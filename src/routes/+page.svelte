@@ -8,20 +8,22 @@
 	import epic from '$lib/assets/epic.png';
 	import epic_square from '$lib/assets/epic_square.png';
 	import * as Carousel from '$lib/components/ui/carousel/index.js';
-	import jointfly_start from '$lib/assets/jointfly_start.png';
-	import jointfly_play from '$lib/assets/jointfly_play.png';
-	import recharge from '$lib/assets/recharge.png';
-	import three_d_studio_one from '$lib/assets/3d_studio_one.png';
-	import three_d_parallel from '$lib/assets/3d_parallel.png';
-	import three_d_oblique from '$lib/assets/3d_oblique.png';
-	import skrivert_meme from '$lib/assets/skrivert_meme.jpg';
-	import mail from '$lib/assets/mail.png';
-	import Autoplay from 'embla-carousel-autoplay';
-	import skrivert_gif from '$lib/assets/skrivert_looping.gif';
-	import skrivert_settings from '$lib/assets/skrivert/settings.png';
-	import skrivert_skriva from '$lib/assets/skrivert/skriva.png';
+	let jointfly_start = 'src/lib/assets/jointfly_start.png';
+	let jointfly_play = 'src/lib/assets/jointfly_play.png';
+	let recharge = 'src/lib/assets/recharge.png';
+	let three_d_studio_one = 'src/lib/assets/3d_studio_one.png';
+	let three_d_parallel = 'src/lib/assets/3d_parallel.png';
+	let three_d_oblique = 'src/lib/assets/3d_oblique.png';
+	let skrivert_meme = 'src/lib/assets/skrivert_meme.jpg';
+	let mail = 'src/lib/assets/mail.png';
+	let skrivert_gif = 'src/lib/assets/skrivert_infinity.gif';
+	let skrivert_settings = 'src/lib/assets/skrivert/settings.png';
+	let skrivert_skriva = 'src/lib/assets/skrivert/skriva.png';
 
-	import { mediaQuery } from 'svelte-legos';
+	import Autoplay from 'embla-carousel-autoplay';
+	import { fullScreenAction, mediaQuery } from 'svelte-legos';
+	import ImageZoom from '$lib/components/ImageZoom.svelte';
+
 	const isDesktop = mediaQuery('(min-width: 768px)');
 
 	let show_mail = false;
@@ -37,6 +39,17 @@
 		} else {
 			kontakt.body = 'Kontakta mig!';
 		}
+	}
+
+	let large_img_src = '';
+
+	function enlargeImage(id: string) {
+		const image_to_enlarge = document.getElementById('large_div');
+		large_img_src = 'src/lib/assets/' + id + '.png';
+		if (id == 'skrivert/gif') {
+			large_img_src = skrivert_gif;
+		}
+		image_to_enlarge?.classList.toggle('hidden');
 	}
 </script>
 
@@ -133,49 +146,59 @@
 		</div>
 	</div>
 
-	<div class="backdrop-blur-xl">
+	<div class="z-30 backdrop-blur-xl">
 		<!--
       <h3 class="sm:hidden  text-sm text-center tracking-tight pb-5 text-gray-500">
         Swipea för att se fler bilder
       </h3>
       !-->
-		<div class="container h-screen snap-center pt-10" id="skrivert">
+		<div class=" h-screen snap-center pt-10" id="skrivert">
 			<h1 class="pb-16 text-center text-lg font-bold tracking-tight">Mina projekt</h1>
-			<div class="items-center justify-center sm:grid sm:grid-cols-2">
-				<div class="container pb-10 sm:order-2" id="skrivert right">
+			<div class="container items-center justify-center sm:grid sm:grid-cols-2">
+				<div class=" pb-10 sm:order-2" id="skrivert right">
 					<Carousel.Root
 						opts={{
 							align: 'start',
 							loop: true
 						}}
-						plugins={[
-							Autoplay({
-								delay: 8000
-							})
-						]}
 					>
 						<Carousel.Content class="mx-auto">
 							<Carousel.Item>
 								<p class="text-md py-3 text-center font-semibold leading-none">1 / 3</p>
-								<img src={skrivert_gif} alt="skrivert gif som jag har gjort" class="mx-auto" />
+								<button on:click={() => enlargeImage('skrivert/gif')}>
+									<img
+										src={skrivert_gif}
+										alt="skrivert gif som jag har gjort"
+										class="mx-auto object-cover sm:w-5/6"
+									/>
+								</button>
 								<p class="text-md py-3 text-center font-semibold leading-none">
 									En kampanj-gif gjord för skrivert
 								</p>
 							</Carousel.Item>
 							<Carousel.Item>
 								<p class="text-md py-3 text-center font-semibold leading-none">2 / 3</p>
-								<img src={skrivert_skriva} alt="skrivert skriva" class="mx-auto w-full sm:w-5/6" />
+								<button on:click={() => enlargeImage('skrivert/skriva')}>
+									<img
+										src={skrivert_skriva}
+										alt="skrivert skriva"
+										class="mx-auto object-cover sm:w-5/6"
+									/>
+								</button>
+
 								<p class="text-md py-3 text-center font-semibold leading-none">
 									Bild från skriverts skriva-vy. Detta är huvudvyn i programmet.
 								</p>
 							</Carousel.Item>
 							<Carousel.Item>
 								<p class="text-md py-3 text-center font-semibold leading-none">3 / 3</p>
-								<img
-									src={skrivert_settings}
-									alt="skrivert settings"
-									class="mx-auto w-full sm:w-5/6"
-								/>
+								<button on:click={() => enlargeImage('skrivert/settings')}>
+									<img
+										src={skrivert_settings}
+										alt="skrivert inställningar"
+										class="mx-auto object-cover sm:w-5/6"
+									/>
+								</button>
 								<p class="text-md py-3 text-center font-semibold leading-none">
 									Bild från skriverts inställningsvy
 								</p>
@@ -213,7 +236,7 @@
 		</div>
 
 		<div class="container h-screen snap-center pt-32 sm:grid sm:grid-cols-2" id="jointfly">
-			<div class="container pb-10 sm:order-2" id="jointfly right">
+			<div class="pb-10 sm:order-2" id="jointfly right">
 				<Carousel.Root
 					opts={{
 						align: 'start',
@@ -223,21 +246,36 @@
 					<Carousel.Content class="mx-auto">
 						<Carousel.Item>
 							<p class="text-md py-3 text-center font-semibold leading-none">1 / 2</p>
-							<img src={jointfly_start} alt="jointfly startskärm" class="mx-auto w-full sm:w-5/6" />
+							<button on:click={() => enlargeImage('jointfly_start')}>
+								<img
+									src={jointfly_start}
+									alt="jointfly startskärm"
+									class="mx-auto object-cover sm:w-5/6"
+								/>
+							</button>
 							<p class="text-md py-3 text-center font-semibold leading-none">
 								jointflys startskärm
 							</p>
 						</Carousel.Item>
 						<Carousel.Item>
 							<p class="text-md py-3 text-center font-semibold leading-none">2 / 2</p>
-							<img src={jointfly_play} alt="jointfly körs" class="mx-auto w-full sm:w-5/6" />
+							<button on:click={() => enlargeImage('jointfly_play')}>
+								<img
+									src={jointfly_play}
+									alt="jointfly körs"
+									class="mx-auto object-cover sm:w-5/6"
+								/>
+							</button>
+
 							<p class="text-md py-3 text-center font-semibold leading-none">
 								Bild på när jointfly körs
 							</p>
 						</Carousel.Item>
 					</Carousel.Content>
-					<Carousel.Previous />
-					<Carousel.Next />
+					{#if $isDesktop}
+						<Carousel.Previous />
+						<Carousel.Next />
+					{/if}
 				</Carousel.Root>
 			</div>
 
@@ -368,6 +406,19 @@
 				<p class="pt-3 text-center text-sm font-semibold text-blue-500 sm:text-left sm:text-xl">
 					<a href="/recharge"> Läs mer </a>
 				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="fixed inset-0 hidden h-screen" id="large_div">
+		<div class="  h-dvh bg-black/50 backdrop-blur-sm">
+			<div class="h-screen">
+				<button
+					on:click={() => enlargeImage('')}
+					class="flex h-full w-screen items-center justify-center py-12"
+				>
+					<img src={large_img_src} alt="stor bild" class="z-40 h-full object-contain" />
+				</button>
 			</div>
 		</div>
 	</div>
