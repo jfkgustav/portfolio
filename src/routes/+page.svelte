@@ -14,7 +14,6 @@
 	import jointfly_play from '$lib/assets/jointfly_play.png';
 	import three_d_parallel from '$lib/assets/three_d_parallel.png';
 	import three_d_oblique from '$lib/assets/three_d_oblique.png';
-	import skrivert_meme from '$lib/assets/skrivert_meme.jpg';
 	import mail from '$lib/assets/mail.png';
 	import skrivert_gif from '$lib/assets/skrivert_infinity.gif';
 	import skrivert_settings from '$lib/assets/skrivert/settings.png';
@@ -46,7 +45,7 @@
 	function enlargeImage(id: string) {
 		const image_to_enlarge = document.getElementById('large_div');
 		const exit_button = document.getElementById('exit_button');
-		large_img_src = 'src/lib/assets/' + id + '.png';
+		large_img_src = '/src/lib/assets/' + id + '.png';
 		if (id == 'skrivert/gif') {
 			large_img_src = skrivert_gif;
 		}
