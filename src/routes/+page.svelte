@@ -84,7 +84,7 @@
 			<div class="mt-5 flex grid-cols-3 justify-between">
 				<div class=" flex flex-col items-center justify-center gap-x-3 p-0 sm:flex-row">
 					<a
-						href="https://drive.google.com/file/d/1EfWN9N_zMMc-tuYh-WKIsXXFoCU6H2wx/view?usp=sharing"
+						href="https://drive.google.com/file/d/1FDiO_uVXU5ZW1Nz2XPv_lO5PlqxAiKji/view"
 					>
 						<Avatar.Root>
 							<Avatar.Image src={cv} alt="Mitt CV" />
@@ -93,7 +93,7 @@
 					</a>
 
 					<a
-						href="https://drive.google.com/file/d/1EfWN9N_zMMc-tuYh-WKIsXXFoCU6H2wx/view?usp=sharing"
+						href="https://drive.google.com/file/d/1FDiO_uVXU5ZW1Nz2XPv_lO5PlqxAiKji/view"
 						class="text-l tracking-tight text-purple-600 lg:text-2xl"
 					>
 						Hämta CV
