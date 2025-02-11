@@ -18,6 +18,9 @@
 	import skrivert_gif from '$lib/assets/skrivert_infinity.gif';
 	import skrivert_settings from '$lib/assets/skrivert/settings.png';
 	import skrivert_skriva from '$lib/assets/skrivert/skriva.png';
+	import radioInfoMainMenu from '$lib/assets/radioInfo/mainMenu.png';
+	import radioInfoP3 from '$lib/assets/radioInfo/P3.png';
+	import radioInfoMore from '$lib/assets/radioInfo/moreInfo.png';
 
 	import Autoplay from 'embla-carousel-autoplay';
 	import { fullScreenAction, mediaQuery } from 'svelte-legos';
@@ -153,6 +156,95 @@
         Swipea för att se fler bilder
       </h3>
       !-->
+	<div class=" h-screen snap-center sm:pt-10" id="radioInfo">
+			<h1 class="pb-16 text-center text-lg font-bold tracking-tight">Mina projekt</h1>
+			<div class="container items-center justify-center sm:grid sm:grid-cols-2">
+				<div class="sm:order-2" id="radioInfo right">
+					<Carousel.Root
+						opts={{
+							align: 'start',
+							loop: true
+						}}
+					>
+						<Carousel.Content class="mx-auto">
+							<Carousel.Item>
+								<p class="text-md py-3 text-center font-semibold leading-none">1 / 3</p>
+								<button on:click={() => enlargeImage('radioInfo/P3')}>
+									<img
+										src={radioInfoP3}
+										alt="radioInfo visar P3s tablå"
+										class="mx-auto object-cover sm:w-5/6"
+									/>
+								</button>
+								<p class="text-md py-3 text-center font-semibold leading-none">
+									RadioInfo visar P3s tablå
+								</p>
+							</Carousel.Item>
+						  <Carousel.Item>
+								<p class="text-md py-3 text-center font-semibold leading-none">2 / 3</p>
+								<button on:click={() => enlargeImage('radioInfo/mainMenu')}>
+									<img
+										src={radioInfoMainMenu}
+										alt="radioInfos huvudmeny"
+										class="mx-auto object-cover sm:w-5/6"
+									/>
+								</button>
+
+								<p class="text-md py-3 text-center font-semibold leading-none">
+									Bild på RadioInfos huvudmeny.
+								</p>
+							</Carousel.Item>
+							<Carousel.Item>
+								<p class="text-md py-3 text-center font-semibold leading-none">3 / 3</p>
+								<button on:click={() => enlargeImage('radioInfo/moreInfo')}>
+									<img
+										src={radioInfoMore}
+										alt="radioInfo visar mer info om ett program"
+										class="mx-auto object-cover sm:w-5/6"
+									/>
+								</button>
+								<p class="text-md py-3 text-center font-semibold leading-none">
+								  RadioInfo visar mer info om ett program
+								</p>
+							</Carousel.Item>
+						</Carousel.Content>
+						{#if $isDesktop}
+							<Carousel.Previous />
+							<Carousel.Next />
+						{/if}
+					</Carousel.Root>
+				</div>
+
+				<div class="px-3 sm:container sm:w-3/5 sm:px-0" id="radioInfo left">
+					<h1 class="text-center text-4xl font-extrabold tracking-tight sm:text-left lg:text-5xl">
+						RadioInfo
+					</h1>
+
+					<h3 class="text-md py-3 text-center font-semibold sm:text-left sm:text-3xl">
+            Ett program som kan visa programtablån för olika kanaler från Sveriges Radio.
+					</h3>
+
+					<div
+						class="mx-auto flex w-full flex-wrap justify-between py-3 text-sm font-bold text-gray-700 sm:text-left sm:text-xl"
+					>
+						<p>Java</p>
+						<p>Swing</p>
+						<p>API</p>
+					</div>
+
+          <div class="flex justify-between">
+					<p class="py-3 text-center text-sm font-semibold text-blue-500 sm:text-left sm:text-xl">
+						<a href="/radioInfo"> Läs mer </a>
+					</p>
+					<p class="py-3 text-center text-sm font-semibold text-blue-500 sm:text-left sm:text-xl">
+          <a href="/RadioInfo.jar" download> Ladda ned körbar JAR-fil </a>
+					</p>
+          </div>
+				</div>
+			</div>
+		</div>
+
+
 		<div class=" h-screen snap-center sm:pt-10" id="skrivert">
 			<h1 class="pb-16 text-center text-lg font-bold tracking-tight">Mina projekt</h1>
 			<div class="container items-center justify-center sm:grid sm:grid-cols-2">
