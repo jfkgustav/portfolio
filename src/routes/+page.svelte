@@ -380,9 +380,14 @@
 					<p>Datorgrafik</p>
 				</div>
 
+        <div class="flex justify-between">
 				<p class="py-3 text-center text-sm font-semibold text-blue-500 sm:text-left sm:text-xl">
 					<a href="/3dstudio"> Läs mer </a>
 				</p>
+				<p class="py-3 text-center text-sm font-semibold text-blue-500 sm:text-left sm:text-xl">
+					<a href="/https://github.com/jfkgustav/3dstudio"> GitHub-repo </a>
+				</p>
+        </div>
 			</div>
 		</div>
 
