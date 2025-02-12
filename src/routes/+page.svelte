@@ -258,7 +258,6 @@
 
 
 		<div class=" h-screen snap-center sm:pt-10" id="skrivert">
-			<h1 class="pb-16 text-center text-lg font-bold tracking-tight">Mina projekt</h1>
 			<div class="container items-center justify-center sm:grid sm:grid-cols-2">
 				<div class="sm:order-2" id="skrivert right">
 					<Carousel.Root
