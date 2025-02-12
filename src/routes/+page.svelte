@@ -500,8 +500,12 @@
 			id="recharge"
 		>
 			<div class="sm:order-2" id="recharge right">
-				<img src={recharge} alt="recharge" class="mx-auto w-full sm:w-5/6" />
-				<p class="py-3 text-center text-xl font-semibold leading-none">RECHARGE</p>
+				<button on:click={() => enlargeImage('recharge')}>
+          <img src={recharge} 
+               alt="recharge" 
+               class="mx-auto w-full sm:w-5/6" />
+        </button>
+			  	<p class="py-3 text-center text-xl font-semibold leading-none">RECHARGE</p>
 			</div>
 
 			<div class=" px-3 sm:container sm:w-3/5 sm:px-0" id="recharge left">
@@ -534,7 +538,7 @@
 			<div class="h-screen">
 				<button
 					id="exit_button"
-					on:click={() => enlargeImage('recharge')}
+					on:click={() => enlargeImage('')}
 					class="flex h-full w-screen -translate-y-32 scale-50 items-center justify-center py-12 transition-all duration-200 focus:translate-x-0 focus:translate-y-0 focus:scale-100 sm:translate-x-96 sm:translate-y-0"
 				>
 					<img src={large_img_src} alt="stor bild" class="z-40 h-full object-contain" />
