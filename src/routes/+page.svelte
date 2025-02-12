@@ -257,8 +257,9 @@
 		</div>
 
 
-		<div class=" h-screen snap-center sm:pt-10" id="skrivert">
-			<div class="container items-center justify-center sm:grid sm:grid-cols-2">
+    <div 
+			class="container grid h-screen snap-center items-center py-16 sm:grid-cols-2 sm:py-0"
+      id="skrivert">
 				<div class="sm:order-2" id="skrivert right">
 					<Carousel.Root
 						opts={{
@@ -338,7 +339,6 @@
 						<a href="/skrivert"> Läs mer </a>
 					</p>
 				</div>
-			</div>
 		</div>
 
 		<div
