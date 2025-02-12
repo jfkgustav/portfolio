@@ -43,15 +43,28 @@
 		}
 	}
 
+
+  const imageMap = {
+    radioInfoMainMenu,
+    radioInfoP3,
+    radioInfoMore,
+    skrivert_gif,
+    skrivert_settings,
+    skrivert_skriva,
+    jointfly_start,
+    jointfly_play,
+    three_d_studio_one,
+    three_d_parallel,
+    three_d_oblique,
+    recharge,
+  };
+
 	let large_img_src = '';
 
 	function enlargeImage(id: string) {
 		const image_to_enlarge = document.getElementById('large_div');
 		const exit_button = document.getElementById('exit_button');
-		large_img_src = '/src/lib/assets/' + id + '.png';
-		if (id == 'skrivert/gif') {
-			large_img_src = skrivert_gif;
-		}
+		large_img_src = imageMap[id]
 		image_to_enlarge?.classList.toggle('hidden');
 		exit_button?.focus();
 	}
@@ -169,7 +182,7 @@
 						<Carousel.Content class="mx-auto">
 							<Carousel.Item>
 								<p class="text-md py-3 text-center font-semibold leading-none">1 / 3</p>
-								<button on:click={() => enlargeImage('radioInfo/P3')}>
+								<button on:click={() => enlargeImage('radioInfoP3')}>
 									<img
 										src={radioInfoP3}
 										alt="radioInfo visar P3s tablå"
@@ -182,7 +195,7 @@
 							</Carousel.Item>
 						  <Carousel.Item>
 								<p class="text-md py-3 text-center font-semibold leading-none">2 / 3</p>
-								<button on:click={() => enlargeImage('radioInfo/mainMenu')}>
+								<button on:click={() => enlargeImage('radioInfoMainMenu')}>
 									<img
 										src={radioInfoMainMenu}
 										alt="radioInfos huvudmeny"
@@ -196,7 +209,7 @@
 							</Carousel.Item>
 							<Carousel.Item>
 								<p class="text-md py-3 text-center font-semibold leading-none">3 / 3</p>
-								<button on:click={() => enlargeImage('radioInfo/moreInfo')}>
+								<button on:click={() => enlargeImage('radioInfoMoreInfo')}>
 									<img
 										src={radioInfoMore}
 										alt="radioInfo visar mer info om ett program"
@@ -258,7 +271,7 @@
 						<Carousel.Content class="mx-auto">
 							<Carousel.Item>
 								<p class="text-md py-3 text-center font-semibold leading-none">1 / 3</p>
-								<button on:click={() => enlargeImage('skrivert/gif')}>
+								<button on:click={() => enlargeImage('skrivert_gif')}>
 									<img
 										src={skrivert_gif}
 										alt="skrivert gif som jag har gjort"
@@ -271,7 +284,7 @@
 							</Carousel.Item>
 							<Carousel.Item>
 								<p class="text-md py-3 text-center font-semibold leading-none">2 / 3</p>
-								<button on:click={() => enlargeImage('skrivert/skriva')}>
+								<button on:click={() => enlargeImage('skrivert_skriva')}>
 									<img
 										src={skrivert_skriva}
 										alt="skrivert skriva"
@@ -285,7 +298,7 @@
 							</Carousel.Item>
 							<Carousel.Item>
 								<p class="text-md py-3 text-center font-semibold leading-none">3 / 3</p>
-								<button on:click={() => enlargeImage('skrivert/settings')}>
+								<button on:click={() => enlargeImage('skrivert_settings')}>
 									<img
 										src={skrivert_settings}
 										alt="skrivert inställningar"
@@ -522,7 +535,7 @@
 			<div class="h-screen">
 				<button
 					id="exit_button"
-					on:click={() => enlargeImage('')}
+					on:click={() => enlargeImage('recharge')}
 					class="flex h-full w-screen -translate-y-32 scale-50 items-center justify-center py-12 transition-all duration-200 focus:translate-x-0 focus:translate-y-0 focus:scale-100 sm:translate-x-96 sm:translate-y-0"
 				>
 					<img src={large_img_src} alt="stor bild" class="z-40 h-full object-contain" />
