@@ -43,7 +43,6 @@
 		}
 	}
 
-
   const imageMap = {
     radioInfoMainMenu,
     radioInfoP3,
@@ -209,7 +208,7 @@
 							</Carousel.Item>
 							<Carousel.Item>
 								<p class="text-md py-3 text-center font-semibold leading-none">3 / 3</p>
-								<button on:click={() => enlargeImage('radioInfoMoreInfo')}>
+								<button on:click={() => enlargeImage('radioInfoMore')}>
 									<img
 										src={radioInfoMore}
 										alt="radioInfo visar mer info om ett program"
