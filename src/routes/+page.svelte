@@ -77,7 +77,7 @@
 			<p class="text-md py-5 text-left font-semibold tracking-tight text-gray-800 lg:text-lg">
 				Jag har suttit vid datorn majoriteten av mitt liv och nu har jag även tänkt att det ska
 				fortsätta så. Därför har jag valt att utbilda mig till civilingenjör i interaktion och
-				design och är nu på mitt tredje år.
+				design och är nu på mitt fjärde år.
 			</p>
 
 			<p class="text-md hidden font-semibold tracking-tight text-gray-800 md:inline lg:text-lg">
