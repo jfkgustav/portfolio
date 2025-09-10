@@ -21,6 +21,10 @@
 	import radioInfoMainMenu from '$lib/assets/radioInfo/mainMenu.png';
 	import radioInfoP3 from '$lib/assets/radioInfo/P3.png';
 	import radioInfoMore from '$lib/assets/radioInfo/moreInfo.png';
+	import minesweeper from '$lib/assets/Minesweeper.jpg';
+	import direq from '$lib/assets/direq.jpg';
+	import direqMV from '$lib/assets/direqMV.jpg';
+	import dubway from '$lib/assets/dubway.jpg';
 
 	import Autoplay from 'embla-carousel-autoplay';
 	import { fullScreenAction, mediaQuery } from 'svelte-legos';
@@ -47,6 +51,7 @@
     radioInfoMainMenu,
     radioInfoP3,
     radioInfoMore,
+    minesweeper,
     skrivert_gif,
     skrivert_settings,
     skrivert_skriva,
@@ -55,6 +60,7 @@
     three_d_studio_one,
     three_d_parallel,
     three_d_oblique,
+    direq,
     recharge,
   };
 
@@ -89,7 +95,7 @@
 			<p class="text-md py-5 text-left font-semibold tracking-tight text-gray-800 lg:text-lg">
 				Jag har suttit vid datorn majoriteten av mitt liv och nu har jag även tänkt att det ska
 				fortsätta så. Därför har jag valt att utbilda mig till civilingenjör i interaktion och
-				design och är nu på mitt fjärde år.
+				design och är nu på mitt femte år.
 			</p>
 
 			<p class="text-md hidden font-semibold tracking-tight text-gray-800 md:inline lg:text-lg">
@@ -99,7 +105,7 @@
 			<div class="mt-5 flex grid-cols-3 justify-between">
 				<div class=" flex flex-col items-center justify-center gap-x-3 p-0 sm:flex-row">
 					<a
-						href="https://drive.google.com/file/d/1FDiO_uVXU5ZW1Nz2XPv_lO5PlqxAiKji/view"
+						href="https://drive.google.com/file/d/1pbmDbrdQeiP-ilISBKhpBU-hK_fN2QKr/view"
 					>
 						<Avatar.Root>
 							<Avatar.Image src={cv} alt="Mitt CV" />
@@ -108,7 +114,7 @@
 					</a>
 
 					<a
-						href="https://drive.google.com/file/d/1FDiO_uVXU5ZW1Nz2XPv_lO5PlqxAiKji/view"
+						href="https://drive.google.com/file/d/1pbmDbrdQeiP-ilISBKhpBU-hK_fN2QKr/view"
 						class="text-l tracking-tight text-purple-600 lg:text-2xl"
 					>
 						Hämta CV
@@ -168,8 +174,46 @@
         Swipea för att se fler bilder
       </h3>
       !-->
-	<div class=" h-screen snap-center sm:pt-10" id="radioInfo">
+	<div class="h-screen snap-center sm:pt-10" id="direq">
 			<h1 class="pb-16 text-center text-lg font-bold tracking-tight">Mina projekt</h1>
+			<div class="container items-center justify-center sm:grid sm:grid-cols-2">
+				<div class="sm:order-2" id="direq right">
+          <button on:click={() => enlargeImage('direq')}>
+            <img src={direq} 
+                 alt="direq" 
+                 class="mx-auto w-full sm:w-5/6" />
+          </button>
+					<p class="text-md py-3 text-center font-semibold leading-none">
+            Till vänster syns åskådarnas vy och till höger syns musikerns vy
+          </p>
+				</div>
+
+				<div class="px-3 sm:container sm:w-3/5 sm:px-0" id="direq left">
+					<h1 class="text-center text-4xl font-extrabold tracking-tight sm:text-left lg:text-5xl">
+						DIREQ
+					</h1>
+
+					<h3 class="text-md py-3 text-center font-semibold sm:text-left sm:text-xl">
+            Ett program som hjälper trubadurer och musiker spela den musik deras åskådare vill höra. Publiken får rösta på befintlig repertoar från sin mobiltelefon och kan också komma med förslag utanför repertoaren. De önskade låtarna presenteras för musikern som en kö baserat på kötid eller baserat på antal röster.
+					</h3>
+
+					<div
+						class="mx-auto flex w-full flex-wrap justify-between py-3 text-sm font-bold text-gray-700 sm:text-left sm:text-xl"
+					>
+						<p>Go</p>
+						<p>Tailwind</p>
+						<p>WIP</p>
+					</div>
+
+					<p class="py-3 text-center text-sm font-semibold text-blue-500 sm:text-left sm:text-xl">
+						<a href="/radioInfo"> Läs mer </a>
+					</p>
+          </div>
+				</div>
+			</div>
+		</div>
+
+	<div class=" h-screen snap-center sm:pt-10" id="radioInfo">
 			<div class="container items-center justify-center sm:grid sm:grid-cols-2">
 				<div class="sm:order-2" id="radioInfo right">
 					<Carousel.Root
@@ -255,6 +299,64 @@
 				</div>
 			</div>
 		</div>
+
+
+		<div
+			class="container grid h-screen snap-center items-center py-16 sm:grid-cols-2 sm:py-0"
+			id="minesweeper"
+		>
+			<div class="sm:order-2" id="minesweeper right">
+				<button on:click={() => enlargeImage('minesweeper')}>
+          <img src={minesweeper} 
+               alt="röj" 
+               class="mx-auto w-full sm:w-5/6" />
+        </button>
+			  	<p class="py-3 text-center text-xl font-semibold leading-none">Röj</p>
+			</div>
+
+			<div class=" px-3 sm:container sm:w-3/5 sm:px-0" id="recharge left">
+				<h1 class="text-center text-4xl font-extrabold tracking-tight sm:text-left lg:text-5xl">
+					MS Röj-klon
+        </h1>
+
+				<h3 class="text-md py-3 text-center font-semibold sm:text-left sm:text-3xl">
+          En egen utmaning att göra en enkel version av spelet "Minesweeper"/"Röj" på en förmiddag för att lära mig grunderna för att skapa GUI med Javas Swing-bibliotek. 
+				</h3>
+
+				<div
+					class="mx-auto flex w-full flex-wrap justify-between py-3 text-sm font-bold text-gray-700 sm:text-left sm:text-xl"
+				>
+					<p>Java</p>
+					<p>Swing</p>
+					<p>Speldesign</p>
+					<p>Tidsgräns</p>
+				</div>
+        <div class="flex justify-between">
+					<p class="py-3 text-center text-sm font-semibold text-blue-500 sm:text-left sm:text-xl">
+						<a href="/radioInfo"> Läs mer </a>
+					</p>
+					<p class="py-3 text-center text-sm font-semibold text-blue-500 sm:text-left sm:text-xl">
+          <a href="/minesweeper.jar" download> Ladda ned körbar JAR-fil </a>
+					</p>
+        </div>
+
+			</div>
+		</div>
+
+	<div class="fixed inset-0 hidden h-screen" id="large_div">
+		<div class="  h-dvh bg-black/50 backdrop-blur-sm">
+			<div class="h-screen">
+				<button
+					id="exit_button"
+					on:click={() => enlargeImage('')}
+					class="flex h-full w-screen -translate-y-32 scale-50 items-center justify-center py-12 transition-all duration-200 focus:translate-x-0 focus:translate-y-0 focus:scale-100 sm:translate-x-96 sm:translate-y-0"
+				>
+					<img src={large_img_src} alt="stor bild" class="z-40 h-full object-contain" />
+				</button>
+			</div>
+		</div>
+	</div>
+
 
 
     <div 
@@ -343,76 +445,6 @@
 
 		<div
 			class="container grid h-screen snap-center items-center py-16 sm:grid-cols-2 sm:py-0"
-			id="jointfly"
-		>
-			<div class="sm:order-2" id="jointfly right">
-				<Carousel.Root
-					opts={{
-						align: 'start',
-						loop: true
-					}}
-				>
-					<Carousel.Content class="mx-auto">
-						<Carousel.Item>
-							<p class="text-md py-3 text-center font-semibold leading-none">1 / 2</p>
-							<button on:click={() => enlargeImage('jointfly_start')}>
-								<img
-									src={jointfly_start}
-									alt="jointfly startskärm"
-									class="mx-auto object-cover sm:w-5/6"
-								/>
-							</button>
-							<p class="text-md py-3 text-center font-semibold leading-none">
-								jointflys startskärm
-							</p>
-						</Carousel.Item>
-						<Carousel.Item>
-							<p class="text-md py-3 text-center font-semibold leading-none">2 / 2</p>
-							<button on:click={() => enlargeImage('jointfly_play')}>
-								<img
-									src={jointfly_play}
-									alt="jointfly körs"
-									class="mx-auto object-cover sm:w-5/6"
-								/>
-							</button>
-
-							<p class="text-md py-3 text-center font-semibold leading-none">
-								Bild på när jointfly körs
-							</p>
-						</Carousel.Item>
-					</Carousel.Content>
-					{#if $isDesktop}
-						<Carousel.Previous />
-						<Carousel.Next />
-					{/if}
-				</Carousel.Root>
-			</div>
-
-			<div class="px-3 sm:container sm:w-3/5 sm:px-0" id="jointfly left">
-				<h1 class="text-center text-4xl font-extrabold tracking-tight sm:text-left lg:text-5xl">
-					jointfly!
-				</h1>
-
-				<h3 class="text-md py-3 text-center font-semibold sm:text-left sm:text-3xl">
-					En prototyp av en app gjord för att styra flera drönare samtidigt från en mobil enhet.
-				</h3>
-
-				<div
-					class="mx-auto flex w-3/4 flex-wrap justify-between py-3 text-sm font-bold text-gray-700 sm:w-full sm:text-left sm:text-xl"
-				>
-					<p>Figma</p>
-					<p>Användarstudier</p>
-					<p>Prototyping</p>
-				</div>
-
-				<p class="py-3 text-center text-sm font-semibold text-blue-500 sm:text-left sm:text-xl">
-					<a href="/jointfly"> Läs mer </a>
-				</p>
-			</div>
-		</div>
-
-		<div
-			class="container grid h-screen snap-center items-center py-16 sm:grid-cols-2 sm:py-0"
 			id="grafikmotor"
 		>
 			<div class="sm:order-2" id="grafikmotor right">
@@ -494,6 +526,129 @@
 			</div>
 		</div>
 
+
+
+		<div
+			class="container grid h-screen snap-center items-center py-16 sm:grid-cols-2 sm:py-0"
+			id="jointfly"
+		>
+			<div class="sm:order-2" id="jointfly right">
+				<Carousel.Root
+					opts={{
+						align: 'start',
+						loop: true
+					}}
+				>
+					<Carousel.Content class="mx-auto">
+						<Carousel.Item>
+							<p class="text-md py-3 text-center font-semibold leading-none">1 / 2</p>
+							<button on:click={() => enlargeImage('jointfly_start')}>
+								<img
+									src={jointfly_start}
+									alt="jointfly startskärm"
+									class="mx-auto object-cover sm:w-5/6"
+								/>
+							</button>
+							<p class="text-md py-3 text-center font-semibold leading-none">
+								jointflys startskärm
+							</p>
+						</Carousel.Item>
+						<Carousel.Item>
+							<p class="text-md py-3 text-center font-semibold leading-none">2 / 2</p>
+							<button on:click={() => enlargeImage('jointfly_play')}>
+								<img
+									src={jointfly_play}
+									alt="jointfly körs"
+									class="mx-auto object-cover sm:w-5/6"
+								/>
+							</button>
+
+							<p class="text-md py-3 text-center font-semibold leading-none">
+								Bild på när jointfly körs
+							</p>
+						</Carousel.Item>
+					</Carousel.Content>
+					{#if $isDesktop}
+						<Carousel.Previous />
+						<Carousel.Next />
+					{/if}
+				</Carousel.Root>
+			</div>
+
+			<div class="px-3 sm:container sm:w-3/5 sm:px-0" id="jointfly left">
+				<h1 class="text-center text-4xl font-extrabold tracking-tight sm:text-left lg:text-5xl">
+					jointfly!
+				</h1>
+
+				<h3 class="text-md py-3 text-center font-semibold sm:text-left sm:text-3xl">
+					En prototyp av en app gjord för att styra flera drönare samtidigt från en mobil enhet.
+				</h3>
+
+				<div
+					class="mx-auto flex w-3/4 flex-wrap justify-between py-3 text-sm font-bold text-gray-700 sm:w-full sm:text-left sm:text-xl"
+				>
+					<p>Figma</p>
+					<p>Användarstudier</p>
+					<p>Prototyping</p>
+				</div>
+
+				<p class="py-3 text-center text-sm font-semibold text-blue-500 sm:text-left sm:text-xl">
+					<a href="/jointfly"> Läs mer </a>
+				</p>
+			</div>
+		</div>
+
+		<div
+			class="container grid h-screen snap-center items-center py-16 sm:grid-cols-2 sm:py-0"
+			id="dubway"
+		>
+			<div class="sm:order-2" id="dubway right">
+				<button on:click={() => enlargeImage('recharge')}>
+          <img src={dubway} 
+               alt="DUBWAY" 
+               class="mx-auto w-full sm:w-5/6" />
+        </button>
+			  	<p class="py-3 text-center text-xl font-semibold leading-none">DUBWAY</p>
+			</div>
+
+			<div class=" px-3 sm:container sm:w-3/5 sm:px-0" id="dubway left">
+				<h1 class="text-center text-4xl font-extrabold tracking-tight sm:text-left lg:text-5xl">
+					DUBWAY
+				</h1>
+
+				<h3 class="text-md py-3 text-center font-semibold sm:text-left sm:text-3xl">
+				  En sketch för ett VST-plugin jag tänkt skapa, som ska göra det enkelt för de som vill producera dub-influerad musik att lägga till standardiserade delay- och reverbeffekter utifrån låtens tempo.
+				</h3>
+
+				<div
+					class="mx-auto flex w-full flex-wrap justify-between py-3 text-sm font-bold text-gray-700 sm:text-left sm:text-xl"
+				>
+					<p>Figma</p>
+          <p>Sketch</p>
+					<p>JUCE</p>
+					<p>VST</p>
+				</div>
+
+				<p class="pt-3 text-center text-sm font-semibold text-blue-500 sm:text-left sm:text-xl">
+					<a href="/dubway"> Läs mer </a>
+				</p>
+			</div>
+	</div>
+
+	<div class="fixed inset-0 hidden h-screen" id="large_div">
+		<div class="  h-dvh bg-black/50 backdrop-blur-sm">
+			<div class="h-screen">
+				<button
+					id="exit_button"
+					on:click={() => enlargeImage('')}
+					class="flex h-full w-screen -translate-y-32 scale-50 items-center justify-center py-12 transition-all duration-200 focus:translate-x-0 focus:translate-y-0 focus:scale-100 sm:translate-x-96 sm:translate-y-0"
+				>
+					<img src={large_img_src} alt="stor bild" class="z-40 h-full object-contain" />
+				</button>
+			</div>
+		</div>
+  </div>
+
 		<div
 			class="container grid h-screen snap-center items-center py-16 sm:grid-cols-2 sm:py-0"
 			id="recharge"
@@ -544,5 +699,4 @@
 				</button>
 			</div>
 		</div>
-	</div>
 </div>
