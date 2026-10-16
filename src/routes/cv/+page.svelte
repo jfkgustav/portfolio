@@ -301,60 +301,51 @@ Go, React, Svelte, SQL, C, C++, C#, Java, Python, Matlab, R, .NET, HTML, CSS, Ja
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/languages/markdown.min.js"></script>
 
 
- <script>
-  (() => {
-    document.querySelectorAll(".cv-column").forEach((column) => {
-      let markdown = column.textContent
-        .replace(/\r\n?/g, "\n")
-        .trim();
 
-      const lines = markdown.split("\n");
-      const indents = lines
-        .filter(line => line.trim().length > 0)
-        .map(line => line.match(/^\s*/)[0].length);
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".cv-column").forEach(column => {
+    // Spara originaltexten innan något HTML skapas
+    const markdown = column.textContent
+      .trim()
+      .replace(/\r\n/g, "\n");
 
-      const minIndent = indents.length
-        ? Math.min(...indents)
-        : 0;
+    // Färga Markdown exakt en gång
+    const highlighted = hljs.highlight(markdown, {
+      language: "markdown"
+    }).value;
 
-      markdown = lines
-        .map(line => line.slice(minIndent))
-        .join("\n");
+    column.innerHTML = highlighted;
+    column.classList.add("hljs");
 
-      const highlighted = window.hljs.highlight(markdown, {
-        language: "markdown"
-      });
+    // Gör Markdown-länkar klickbara utan att ändra texten
+    const walker = document.createTreeWalker(
+      column,
+      NodeFilter.SHOW_TEXT
+    );
 
-      column.innerHTML = highlighted.value;
-      column.classList.add("hljs");
+    const nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
 
-      // Gör länkar klickbara utan att ändra Highlight.js HTML.
-      const anchors = [];
-      const walker = document.createTreeWalker(
-        column,
-        NodeFilter.SHOW_TEXT
+    nodes.forEach(node => {
+      const match = node.textContent.match(
+        /^\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)$/
       );
 
-      const nodes = [];
-      while (walker.nextNode()) nodes.push(walker.currentNode);
+      if (!match) return;
 
-      nodes.forEach((node) => {
-        const text = node.nodeValue || "";
-        const match = text.match(/^https?:\/\/\S+$/);
-        if (!match) return;
+      const link = document.createElement("a");
+      link.href = match[2];
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = node.textContent;
 
-        const a = document.createElement("a");
-        a.href = text;
-        a.target = "_blank";
-        a.rel = "noopener noreferrer";
-        a.className = "md-link";
-        a.textContent = text;
-
-        node.parentNode.replaceChild(a, node);
-      });
+      node.parentNode.replaceChild(link, node);
     });
-  })();
+  });
+});
 </script>
+
 	</body>
 
 
