@@ -27,6 +27,7 @@
 
 body {
 	margin: 0;
+	padding-top: 10px;
 	color: var(--fg);
 	font-family: "Monocraft", "DejaVu Sans Mono", monospace;
 	font-size: 14px;
