@@ -27,7 +27,6 @@
 
 body {
 	margin: 0;
-	padding: 32px 20px 56px;
 	color: var(--fg);
 	font-family: "Monocraft", "DejaVu Sans Mono", monospace;
 	font-size: 14px;
@@ -150,7 +149,7 @@ body {
 		}
 		</style>
 		<link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.10.0/styles/gruvbox-light.min.css">
+      href="https://unpkg.com/@highlightjs/cdn-assets@11.10.0/styles/gruvbox-light.min.css">
 	</head>
 	<body>
 
