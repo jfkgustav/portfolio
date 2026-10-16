@@ -1,9 +1,7 @@
-<!doctype html>
-<html lang="sv">
-	<head>
+<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Markdown — Gruvbox Light</title>
+		<title>Gustavs CV</title>
 
 		<!-- Monocraft används om fontfilen finns lokalt på datorn. -->
 		<style>
@@ -358,5 +356,5 @@ Go, React, Svelte, SQL, C, C++, C#, Java, Python, Matlab, R, .NET, HTML, CSS, Ja
   })();
 </script>
 	</body>
-</html>
+
 
