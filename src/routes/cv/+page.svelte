@@ -150,7 +150,7 @@ body {
 		}
 		</style>
 		<link rel="stylesheet"
-					href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/gruvbox-light.min.css">
+      		href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/styles/gruvbox-light.min.css">
 	</head>
 	<body>
 
